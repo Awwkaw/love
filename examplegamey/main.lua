@@ -1,6 +1,7 @@
 function love.load()
         love.graphics.setBackgroundColor( 0, 50, 200)
         xCloud = 300
+        coolpic = love.graphics.newImage('textures/coolpic.png')
 end
 
 function love.draw()
@@ -13,6 +14,9 @@ function love.draw()
         
         love.graphics.setColor(255,255,255)
         love.graphics.rectangle('fill',xCloud,100,100,64)
+
+        love.graphics.setColor(0,255,20)
+        love.graphics.draw(coolpic)
 end
 
 function love.update(dt)
