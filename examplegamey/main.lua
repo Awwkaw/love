@@ -1,13 +1,14 @@
 function love.load()
         love.graphics.setBackgroundColor( 0, 50, 200)
         xCloud = 300
+        ga = 200
         px = 200
         py = 200
         pax = 0
         pay = 0
         pvx = 0
         pvy = 0
-        ares= 0.5
+        ares= 0.9
         coolpic = love.graphics.newImage('textures/coolpic.png')
 end
 
@@ -45,20 +46,32 @@ end
 
 function love.keypressed(key, unicode)
         if key == 'left' then 
-                pax = pax - 5
+                pax = pax - ga
         end
         if key == 'right' then 
-                pax = pax + 5
+                pax = pax + ga
         end
         if key == 'down' then 
-                pay = pay + 5
+                pay = pay + ga
         end
         if key == 'up' then 
-                pay = pay - 5
+                pay = pay - ga
         end
 end
 
 function love.keyreleased(key,unicode)
+         if key == 'left' then 
+                pax = pax + ga
+        end
+        if key == 'right' then 
+                pax = pax - ga
+        end
+        if key == 'down' then 
+                pay = pay - ga
+        end
+        if key == 'up' then 
+                pay = pay + ga
+        end       
 end
 
 function love.mousepressed( x,y, button)
